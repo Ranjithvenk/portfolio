@@ -55,7 +55,7 @@ function App() {
               <a href="#signup" className="btn btn-primary">Contact Me</a>
             </div>
             <div className="col-md-6">
-              <img src={prof} className="img-fluid" alt="Hero Image" />
+              <img src={prof} style={{ marginLeft:"80px"} } className="img-fluid" alt="Hero Image" />
             </div>
           </div>
         </div>
