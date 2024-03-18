@@ -1,7 +1,9 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import "bootstrap-icons/font/bootstrap-icons.css";
 import './App.css'; // Custom CSS if needed
 import port from "../src/logo/portfolio.png";
+import { Offcanvas } from 'bootstrap';
 import cv from "./cv/Ranjith.pdf"
 // import nav from "./App.module.css";
 import prof from "../src/logo/IMG1.jpg";
@@ -25,21 +27,29 @@ import tol4 from "../src/logo/git.jpg";
 
 function App() {
 
-
-
-
   return (
-    <div className="container-fluid">
+    <div className="container">
 
+
+
+      {/* ------------------------------------------------------------------navbar-------------------------------------------------- */}
       <header>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
             <a className="navbar-brand" href="#" style={{ fontSize: "26px", fontWeight: "bolder" }}>
               <img style={{ marginRight: "40px" }} src={port} alt="" width="50" height="35" />Portfolio
             </a>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop"  aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
+
+
+            {/* <button class="btn btn-primary" type="button" >
+        Toggle static offcanvas
+      </button> */}
+
+
+
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ml-auto">
                 <li style={{ marginLeft: "40px", marginRight: "40px", fontSize: "18px", fontWeight: "500" }} className="nav-item">
@@ -66,6 +76,9 @@ function App() {
         </nav>
       </header>
 
+
+      {/* ---------------------------------------------------------------overview--------------------------------------------------- */}
+
       <section id="hero" className="hero">
         <div className="container-fluid">
           <div className="row align-items-center">
@@ -82,6 +95,9 @@ function App() {
       </section>
 
 
+
+      {/* -----------------------------------------------------------About---------------------------------------------------- */}
+
       <section id="hero" className="hero">
         <div className="container-fluid">
           <div className="row align-items-center">
@@ -90,9 +106,6 @@ function App() {
             </div>
             <div className="col-md-6 port-desc">
               <h1>About Me</h1>
-
-
-
               <div class="card mb-3" >
                 <div class="row g-0">
                   <div class="col-md-4">
@@ -143,6 +156,8 @@ function App() {
         </div>
       </section>
 
+
+      {/* -----------------------------------------------------------my Skills------------------------------------------------ */}
 
       <section id="hero" className="hero" style={{ marginTop: "60px" }}>
         <div className="container-fluid">
@@ -217,13 +232,11 @@ function App() {
       </section>
 
 
+      {/* ------------------------------------------------------------Project------------------------------------------------- */}
 
       <section id="hero" className="hero backgrclr" style={{ marginTop: "50px" }}>
         <div className="container-fluid">
           <div className="row align-items-center">
-            {/* <div className="col-md-6">
-              <img src={exp} style={{ marginLeft: "10px", marginTop:"150px" }} className="img-fluid" alt="Hero Image" />
-            </div> */}
             <div className="col-md-12 port-desc">
               <h1 style={{ textAlign: "center", marginTop: "150px" }}>My Projects</h1>
               <p className="col-md-6 port-desc" style={{ textAlign: "center", marginLeft: "400px" }}>I'm a bit of a digital product junky. Over the years I've used hundreds of web and mobile apps in different industries and verticals. Eventually, I decided that it would be a fun challenge to design and build my own.</p>
@@ -256,6 +269,8 @@ function App() {
       </section>
 
 
+      {/* -----------------------------------------------------------Resume--------------------------------------------------- */}
+
       <section id="download-cv" className=" bg-light" style={{ marginTop: "200px" }} >
         <div className="container-fluid">
           <div className="row">
@@ -272,34 +287,124 @@ function App() {
         </div>
       </section>
 
-      {/* ----------------------------------contact-------------------------------------------------- */}
+      {/* ----------------------------------------------------------contact------------------------------------------------- */}
 
-      <section id="contact-details" className="py-5 bg-light">
-        <div className="container-fluid">
+      <section id="contact-details" className="py-5 mt-5">
+        <div className="container-fluid mt-5">
           <div className="row">
             <div className="col-lg-6">
-              <img src={contact} className="img-fluid mb-3" alt="Logo" />
+              <img src={contact} class="img-thumbnail con-sty1" alt="Logo" />
 
             </div>
             <div className="col-lg-6">
-              <h2>Contact Form</h2>
-              <p>Include your contact form here...</p>
-              <ul className="list-unstyled">
-                <li><strong>Email:</strong> ranjithv16081999@gmail.com</li>
-                <li><strong>Phone:</strong> +91 8220680912</li>
-                <li><strong>Address:</strong> Salem, Tamilnadu, India</li>
-                <li><strong>Github:</strong> <a href="https://github.com/Ranjithvenk" class="link-primary"></a></li>
-                <li><strong>Linkedin:</strong> <a href="https://www.linkedin.com/in/ranjith-venkatachalam/" class="link-primary"></a></li>
+              <h2>Contact Details</h2>
+              <ul className="list-unstyled con-sty">
+                <li><strong>Email:</strong>&nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp; ranjithv16081999@gmail.com</li>
+                <li><strong>Phone:</strong>&nbsp;  &nbsp;  &nbsp; &nbsp;  +91 8220680912</li>
+                <li><strong>Address:</strong>&nbsp; &nbsp; &nbsp; Salem, Tamilnadu, India</li>
+                <li><strong>Github:</strong>&nbsp;  &nbsp;  &nbsp; &nbsp;  <a style={{ fontStyle: "italic" }}> https://github.com/Ranjithvenk</a> </li>
+                <li><strong>Linkedin:</strong> &nbsp;  &nbsp; <a style={{ fontStyle: "italic" }} >https://www.linkedin.com/in/ranjith-venkatachalam</a></li>
               </ul>
             </div>
           </div>
         </div>
       </section>
-      <footer>
-        <div className="container-fluid">
-          <p>&copy; 2024 Company Name. All Rights Reserved.</p>
+
+
+      {/* ----------------------------------------------------------footer----------------------------------------------------------- */}
+
+      <div class="container my-5">
+        <footer
+          class="text-center text-lg-start text-dark"
+        // style="background-color: #ECEFF1"
+        >
+          <section
+            class="d-flex justify-content-between p-4 text-black"
+          // style="background-color: #21D192"
+          >
+            <div class="me-5">
+              <span style={{ fontSize: "20px" }}>Get connected with us on social networks:</span>
+            </div>
+            <div class="hhh">
+              <a href="#" class="text-black me-4 ">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="" class="text-black me-4">
+                <i class="bi bi-whatsapp"></i>
+              </a>
+              <a href="" class="text-black me-4">
+                <i class="bi bi-google"></i>
+              </a>
+              <a href="" class="text-black me-4">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="" class="text-black me-4">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a href="https://github.com/Ranjithvenk" class="text-black me-4">
+                <i class="bi bi-github"></i>
+              </a>
+            </div>
+          </section>
+
+          <section class="">
+            <div class="container text-center text-md-start mt-5">
+              <div class="row mt-3">
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                  <h6 class="text-uppercase fw-bold">Highlights</h6>
+                  <hr
+                    class="mb-4 mt-0 d-inline-block mx-auto"
+                  // style="width: 60px; background-color: #7c4dff; height: 2px"
+                  />
+                  <p>
+                    A successful website does three things:
+                    It attracts the right kinds of visitors.
+                    Guides them to the main services or product you offer.
+                    Collect Contact details for future ongoing relation
+                  </p>
+                </div>
+
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                  <h6 class="text-uppercase fw-bold">Contact</h6>
+                  <hr
+                    class="mb-4 mt-0 d-inline-block mx-auto"
+                  // style="width: 60px; background-color: #7c4dff; height: 2px"
+                  />
+                  <p><i class="bi bi-shop"></i> Salem, Tamilnadu- 637303.</p>
+                  <p><i class="bi bi-envelope"></i> info@example.com</p>
+                  <p><i class="bi bi-telephone"></i> + 91 82206 80912</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div
+            class="text-center p-3"
+          >
+            © 2024 Copyright:
+            <a class="text-dark" href="https://github.com/Ranjithvenk"
+            >RanjithPortfolio.com</a
+            >
+          </div>
+        </footer>
+      </div>
+
+
+     
+
+      <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="staticBackdropLabel">Offcanvas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-      </footer>
+        <div class="offcanvas-body">
+          <div>
+            I will not close if you click outside of me.
+          </div>
+        </div>
+      </div>
+
+
     </div>
   );
 }

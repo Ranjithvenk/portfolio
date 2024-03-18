@@ -33,3 +33,21 @@ flex-direction: row;
   height: 500px;
   border-radius: 15px;
 }
+
+.con-sty{
+  /* border: 1px solid black; */
+  height: 400px;
+  font-size: 20px;
+  line-height: 50px;
+}
+
+.con-sty1{
+  border: none;
+  height: 500px;
+  margin-left: 20PX;
+}
+
+.hhh{
+  zoom:150%;
+  /* margin-right: 250px; */
+}
