@@ -1,5 +1,11 @@
 .port-desc>p {
-
+  font-family: "Poppins", sans-serif;
+  font-weight: 100px;
+  font-style: normal;
+  font-size: 18px;
+  text-align: justify;
+}
+.off-desc>h6 {
   font-family: "Poppins", sans-serif;
   font-weight: 100px;
   font-style: normal;
@@ -13,6 +19,7 @@
   font-style: normal;
   margin-bottom: 30px;
 }
+
 .port-desc22>h1 {
   font-family: "Kanit", sans-serif;
   font-weight: 400;
@@ -21,33 +28,29 @@
   /* margin-bottom: 30px; */
 }
 
-.port-desc1{
+.port-desc1 {
   /* border: 1px solid black; */
-display: flex;
-flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
-.backgrclr{
+.backgrclr {
   background-color: #6E07F3;
   color: #fff;
   height: 500px;
   border-radius: 15px;
 }
 
-.con-sty{
-  /* border: 1px solid black; */
-  height: 400px;
+.con-sty {
+  /* height: 400px; */
   font-size: 20px;
   line-height: 50px;
 }
 
-.con-sty1{
-  border: none;
-  height: 500px;
-  margin-left: 20PX;
+.CV-01>P {
+  margin-top: 80px;
 }
 
-.hhh{
-  zoom:150%;
-  /* margin-right: 250px; */
+.hhh {
+  zoom: 150%;
 }
