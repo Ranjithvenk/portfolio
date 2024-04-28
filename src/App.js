@@ -2,8 +2,6 @@ import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { offcanvas } from 'bootstrap';
-import { Toast } from 'react-bootstrap';
 import port from "../src/logo/portfolio.png";
 import prof from "../src/logo/IMG1.jpg";
 import baner from "../src/logo/ban.jpg";
@@ -35,7 +33,7 @@ function App() {
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
             <a className="navbar-brand" href="#" style={{ fontSize: "26px", fontWeight: "bolder" }}>
-              <img style={{ marginRight: "40px" }} src={port} alt="" width="50" height="35" />Portfolio
+              <img style={{ marginRight: "40px" }} src={port} alt="image" width="50" height="35" />Portfolio
             </a>
             <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
@@ -93,7 +91,7 @@ function App() {
               <div className="card mb-3" >
                 <div className="row g-0">
                   <div className="col-md-4">
-                    <img src={front} className="img-fluid rounded-start" alt="..." />
+                    <img src={front} className="img-fluid rounded-start" alt="image" />
                   </div>
                   <div className="col-md-8">
                     <div className="card-body">
@@ -107,7 +105,7 @@ function App() {
               <div className="card mb-3" >
                 <div className="row g-0">
                   <div className="col-md-4">
-                    <img src={back} className="img-fluid rounded-start" alt="..." />
+                    <img src={back} className="img-fluid rounded-start" alt="image" />
                   </div>
                   <div className="col-md-8">
                     <div className="card-body">
@@ -121,7 +119,7 @@ function App() {
               <div className="card mb-3" >
                 <div className="row g-0">
                   <div className="col-md-4">
-                    <img src={sql} className="img-fluid rounded-start" alt="..." />
+                    <img src={sql} className="img-fluid rounded-start" alt="image" />
                   </div>
                   <div className="col-md-8">
                     <div className="card-body">
